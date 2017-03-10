@@ -27,7 +27,7 @@
 
 <div class="new-collection">
 
-
+<% if(locals.isAuthenticated) { %>
 <form method="POST" action="/users/<%= user.id %>/collections">
   <div class="form-group">
     <label for="name"></label>
@@ -37,3 +37,4 @@
 </div>
 
 </form>
+<% } %>

@@ -6,13 +6,15 @@
     <p><%= video.description %><p>
     </div>
 
-
+    <% if(locals.isAuthenticated) { %>
     <form method="POST" action="/users/<%= user.id %>/collections/<%=collection.id%>/videos/<%= video.id%>">
       <input type="hidden" name="_method" value="DELETE">
       <button>Delete</button>
     </form>
-
+    <% } %>
+    <% if(locals.isAuthenticated) { %>
     <a href="/users/<%= user.id %>/collections/<%=collection.id%>/videos/<%= video.id%>/edit">Edit</a>
+    <% } %>
   </div>
 
 

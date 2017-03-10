@@ -2,12 +2,15 @@
 
 <div class="collection-name">
   <h2><%= collection.name %></h2>
-
+  <% if(locals.isAuthenticated) { %>
   <a href="/users/<%= user.id %>/collections/<%= collection.id %>/edit">(Edit Collection)</a>
+  <% } %>
 </div>
 
 <div class="add-new-video">
-<a href="/users/<%= user.id %>/collections/<%= collection.id %>/videos/new">Add new video</a>
+  <% if(locals.isAuthenticated) { %>
+  <a href="/users/<%= user.id %>/collections/<%= collection.id %>/videos/new">Add new video</a>
+  <% } %>
 </div>
 
 <div>
@@ -26,5 +29,7 @@
 </div>
 
 <div class="add-new-video">
-<a href="/users/<%= user.id %>/collections/<%= collection.id %>/videos/new">Add new video</a>
+  <% if(locals.isAuthenticated) { %>
+  <a href="/users/<%= user.id %>/collections/<%= collection.id %>/videos/new">Add new video</a>
+  <% } %>
 </div>

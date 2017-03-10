@@ -96,6 +96,7 @@ img {
 a {
   color:grey;
   font-size: 12px;
+  margin: 0 auto;
 
 }
 
@@ -176,6 +177,17 @@ span {
   background-color: rgb(240, 240, 255);
 
  }
+
+
+ form {
+ text-align: center;
+ display: block;
+ padding: 10%;
+ position: relative;
+ background-color: rgb(240, 240, 255);
+
+}
+
 
  .button {
   color: white;

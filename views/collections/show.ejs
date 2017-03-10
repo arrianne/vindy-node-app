@@ -1,0 +1,30 @@
+<h1>Collections</h1>
+
+<div class="collection-name">
+  <h2><%= collection.name %></h2>
+
+  <a href="/users/<%= user.id %>/collections/<%= collection.id %>/edit">(Edit Collection)</a>
+</div>
+
+<div class="add-new-video">
+<a href="/users/<%= user.id %>/collections/<%= collection.id %>/videos/new">Add new video</a>
+</div>
+
+<div>
+  <% collection.videos.forEach((video) => { %>
+    <div class="video-list">
+      <a href="/users/<%= user.id %>/collections/<%= collection.id %>/videos/<%= video.id %>">
+        <h2><%= video.name %></h2>
+      </a>
+      <div class"image">
+        <img src="<%=video.thumbnailUrl%>">
+      </div>
+
+      <p><%= video.description %></p>
+    </div>
+  <% }) %>
+</div>
+
+<div class="add-new-video">
+<a href="/users/<%= user.id %>/collections/<%= collection.id %>/videos/new">Add new video</a>
+</div>

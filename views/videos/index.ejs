@@ -1,0 +1,17 @@
+<h1>Videos INDEX</h1>
+
+<div class="row">
+  <% videos.forEach((video) => { %>
+    <div class="col-m-6">
+      <a href="/users/<%= user.id %>/collections/<%= collection.id %>/videos/<%= video.id %>">
+        <h2><%= video.name %></h2>
+        <img src="<%= video.thumbnailUrl %>">
+
+      </a>
+      <p><%= video.youtubeId %></p>
+      <p><%= video.description %></p>
+    </div>
+  <% }) %>
+</div>
+
+<a href="/users/<%= user.id %>/collections/<%= collection.id %>/videos/new">Add your own video!</a>

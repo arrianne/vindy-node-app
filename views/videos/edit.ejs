@@ -1,0 +1,20 @@
+<h1>Videos EDIT</h1>
+
+<form method="POST" action="/users/<%= user.id %>/collections/<%= collection.id %>/videos/<%= video.id %>">
+  <input type="hidden" name="_method" value="PUT">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" value="<%= video.name %>">
+  </div>
+
+  <div>
+    <label for="url">Embed Code or Share Link</label>
+    <input type="text" name="url" id="url" value="<%= video.url %>">
+  </div>
+
+  <div>
+    <label for="description">Description</label>
+    <input type="text" name="description" id="description" value="<%= video.description %>">
+  </div>
+  <button class="button">Submit</button>
+</form>

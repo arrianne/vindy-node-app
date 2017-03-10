@@ -1,0 +1,36 @@
+<h1>New Video</h1>
+
+
+<form id="search">
+  <label></label>
+  <input type="text" name="q">
+  <button class="button">Search Youtube</button>
+</form>
+
+
+
+<div class="results"></div>
+
+
+
+<br>
+
+
+
+<form method="POST" action="/users/<%= user.id %>/collections/<%= collection.id %>/videos">
+  <div class="form-group">
+    <label for="name"></label>
+    <input type="text" placeholder="Name" name="name" id="name">
+  </div>
+
+  <div class="form-group">
+    <input type="hidden" name="youtubeId" id="youtubeId">
+    <input type="hidden" name="thumbnailUrl" id="thumbnailUrl">
+  </div>
+
+  <div class="form-group">
+    <label for="description"></label>
+    <input type="text" placeholder="Video Description" name="description" id="description">
+  </div>
+  <button class="button">Submit</button>
+</form>

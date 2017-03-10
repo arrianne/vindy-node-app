@@ -1,0 +1,20 @@
+<div>
+  <div>
+    <h2><%= video.name %></h2>
+    <div class="watch-video">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.youtubeId %>" frameborder="0" allowfullscreen></iframe>
+    <p><%= video.description %><p>
+    </div>
+
+
+    <form method="POST" action="/users/<%= user.id %>/collections/<%=collection.id%>/videos/<%= video.id%>">
+      <input type="hidden" name="_method" value="DELETE">
+      <button>Delete</button>
+    </form>
+
+    <a href="/users/<%= user.id %>/collections/<%=collection.id%>/videos/<%= video.id%>/edit">Edit</a>
+  </div>
+
+
+  <a href="/users/<%= user.id %>/collections/<%=collection.id%>">Back</a>
+</div>

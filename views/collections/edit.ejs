@@ -1,0 +1,10 @@
+<h1>Edit collection</h1>
+
+<form method="POST" action="/users/<%= user.id %>/collections/<%= collection.id %>">
+  <input type="hidden" name="_method" value="PUT">
+  <div>
+    <label for="name"></label>
+    <input type="text" name="name" id="name" placeholder="New name" value="<%= collection.name %>">
+  </div>
+  <button class="button">Submit</button>
+</form>

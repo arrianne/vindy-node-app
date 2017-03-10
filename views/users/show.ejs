@@ -1,0 +1,39 @@
+<h1>User</h1>
+
+<div class="profile">
+    <img class="profile-pic" src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png" />
+    <%# <div class="upload-button" placeholder="upload image"></div>
+    <input class="file-upload" type="file" accept="image/*"/>%>
+
+    <h2><%= user.username %></h2>
+
+
+</div>
+<div class="user-collection">
+<% user.collections.forEach((collection) => { %>
+  <a href="/users/<%= user.id %>/collections/<%= collection.id %>">
+  <div class="collection-name">
+   <h2><%= collection.name %></h2>
+  </div>
+  </a>
+  <% if(locals.isAuthenticated) { %>
+    <form method="POST" action="/users/<%= user.id %>/collections/<%=collection.id%>">
+    <input type="hidden" name="_method" value="DELETE">
+    <button class="button">Delete</button>
+  <% } %>
+  </form>
+<% }) %>
+</div>
+
+<div class="new-collection">
+
+
+<form method="POST" action="/users/<%= user.id %>/collections">
+  <div class="form-group">
+    <label for="name"></label>
+    <input type="text" name="name" id="name" placeholder="New collection">
+  </div>
+  <button class="button">Submit</button>
+</div>
+
+</form>

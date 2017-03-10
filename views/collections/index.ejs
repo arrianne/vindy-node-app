@@ -1,0 +1,17 @@
+<h1>Your collections</h1>
+
+<div class="row">
+  <div class="col-m-6">
+    
+    <% collections.forEach((collection) => { %>
+      <div>
+        <a href="/users/<%= user.id %>/collections/<%= collection.id %>">
+
+          <div class="collection-name">
+          <h2><%= collection.name %></h2>
+          </div>
+        </a>
+      </div>
+    <% }) %>
+  </div>
+</div>

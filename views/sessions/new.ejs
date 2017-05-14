@@ -1,23 +1,22 @@
 <h1>Login</h1>
-<div class="login">
-<form class="form" method="POST" action="/login">
-
-  <div>
-    <label for="email"></label>
-    <input type="text" name="email" placeholder="Email" id="email" required>
-  </div>
-  <div>
-    <label for="password"></label>
-    <input type="password" name="password" placeholder="Password" id="password" required>
-  </div>
-
-    <button class="button">Login</button>
-
-  </form>
-
- <span>Or</span>
-
- <a href="<%= oauth.github.getLoginURL() %>" target="_blank" class="btn btn-primary">Login With Github</a>
- <a href="<%= oauth.facebook.getLoginURL() %>" target="_blank" class="btn btn-primary">Login With Facebook</a>
-
-</div>
+<div class="container">
+  <div class="row">
+       <div class=" col-lg-6 col-sm-12 imageLeft"></div>
+        <div class="col-lg-6 col-sm-12 login">
+          <form class="form" method="POST" action="/login">
+            <div>
+              <label for="email"></label>
+              <input type="text" name="email" placeholder="Email" id="email" required>
+            </div>
+            <div>
+              <label for="password"></label>
+              <input type="password" name="password" placeholder="Password" id="password" required>
+            </div>
+            <button class="button">Login</button>
+            <span>Or</span>
+            <a href="<%= oauth.github.getLoginURL() %>" target="_blank" class="btn btn-primary">Login With Github</a>
+            <a href="<%= oauth.facebook.getLoginURL() %>" target="_blank" class="btn btn-primary">Login With Facebook</a>
+          </form>
+        </div>
+      </div>
+    </div>

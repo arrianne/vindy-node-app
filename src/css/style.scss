@@ -1,6 +1,9 @@
 body {
   background-color: white;
 }
+.homepage {
+  background-color: black;
+}
 
 #video-container {
   min-height: calc(100vh - 60px);
@@ -39,7 +42,7 @@ body {
 
 
   h1 {
-  font-family: 'Abel', sans-serif;
+  font-family: 'Oleo Script', cursive;
   font-weight: 600;
   // padding-left: 8%;
   color: rgb(172, 185, 210);
@@ -59,10 +62,10 @@ h2 {
 
 
 img {
-  width: 50%;
-  height: 50%;
+  width: 400px;
+
   display: block;
-  margin: 5% auto;
+  margin: 20% auto;
 
 }
 
@@ -86,7 +89,7 @@ img {
           float: none;
           }
           a:hover {
-            background-color: grey;
+            color: white;
           }
 
         }
@@ -121,16 +124,43 @@ p {
 //login form
 .login {
   background-color: white;
-  margin: 0 auto;
-  width: 60%;
+  // margin: 0 auto;
+  float: right;
+
   padding: 5%;
   border: 1px solid #e6e6e9;
 
   .form-group {
-    margin:0 auto;
+    // margin:0 auto;
     padding:0;
     background-color: white;
+
   }
+  .topLeft {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-left: 1px solid blue;
+    border-top: 1px solid blue;
+    display: inline;
+    float: left;
+
+  }
+  .topRight {
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-left: 1px solid blue;
+    border-top: 1px solid blue;
+
+
+  }
+}
+
+.imageLeft {
+  height:200px;
+  display: inline-block;
+  background-color: black;
 }
 
 span {
@@ -312,4 +342,11 @@ footer {
   margin: 0 auto;
   padding: 5%;
   display: block;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .homepage {
+  background: src="../assets/images/frankie.jpg"
+ }
 }

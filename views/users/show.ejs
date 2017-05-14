@@ -6,35 +6,23 @@
     <input class="file-upload" type="file" accept="image/*"/>%>
 
     <h2><%= user.username %></h2>
-
-
 </div>
+
+
+
 <div class="user-collection">
 <% user.collections.forEach((collection) => { %>
   <a href="/users/<%= user.id %>/collections/<%= collection.id %>">
   <div class="collection-name">
    <h2><%= collection.name %></h2>
+   <% if(locals.isAuthenticated) { %>
+     <form method="POST" action="/users/<%= user.id %>/collections/<%=collection.id%>">
+     <input type="hidden" name="_method" value="DELETE">
+     <button class="button2">Delete</button>
+   <% } %>
+   </form>
   </div>
   </a>
-  <% if(locals.isAuthenticated) { %>
-    <form method="POST" action="/users/<%= user.id %>/collections/<%=collection.id%>">
-    <input type="hidden" name="_method" value="DELETE">
-    <button class="button">Delete</button>
-  <% } %>
-  </form>
+
 <% }) %>
 </div>
-
-<div class="new-collection">
-
-<% if(locals.isAuthenticated) { %>
-<form method="POST" action="/users/<%= user.id %>/collections">
-  <div class="form-group">
-    <label for="name"></label>
-    <input type="text" name="name" id="name" placeholder="New collection">
-  </div>
-  <button class="button">Submit</button>
-</div>
-
-</form>
-<% } %>

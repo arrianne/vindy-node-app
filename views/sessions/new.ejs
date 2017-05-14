@@ -1,9 +1,11 @@
-<h1>Login</h1>
-<div class="container">
+<section id="contact class" class="container content-section text-center">
+
+ <div class="container-fluid">
   <div class="row">
-       <div class=" col-lg-6 col-sm-12 imageLeft"></div>
-        <div class="col-lg-6 col-sm-12 login">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
           <form class="form" method="POST" action="/login">
+            <h1>LOGIN</h1>
             <div>
               <label for="email"></label>
               <input type="text" name="email" placeholder="Email" id="email" required>
@@ -12,11 +14,12 @@
               <label for="password"></label>
               <input type="password" name="password" placeholder="Password" id="password" required>
             </div>
-            <button class="button">Login</button>
+            <button class="button">LOGIN</button>
             <span>Or</span>
             <a href="<%= oauth.github.getLoginURL() %>" target="_blank" class="btn btn-primary">Login With Github</a>
             <a href="<%= oauth.facebook.getLoginURL() %>" target="_blank" class="btn btn-primary">Login With Facebook</a>
           </form>
         </div>
-      </div>
+
     </div>
+  </section>

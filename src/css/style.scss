@@ -40,22 +40,41 @@ body {
   }
 }
 
+.form{
+  background-image: url("../assets/images/logoedges.png");
+  background-size: cover;
+  background-size: 100% 100%;
 
-  h1 {
-  font-family: 'Oleo Script', cursive;
-  font-weight: 600;
-  // padding-left: 8%;
-  color: rgb(172, 185, 210);
-  text-align: center;
-  padding: 2%;
-  font-size: 60px;
-  border-bottom: 3px solid rgb(172, 185, 210);
-  padding-bottom: 5px;
- }
+  min-height: 650px;
+  padding: 80px;
+  padding-top: 120px;
+}
+
+.bg {
+  background-image: url("../assets/images/logoedges.png");
+  background-size: cover;
+  background-size: 100% 100%;
+
+  min-height: 650px;
+  padding: 80px;
+  padding-top: 120px;
+
+}
+
+h1 {
+    font-family: 'Open Sans Condensed',sans-serif;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    padding: 2%;
+    font-size: 60px;
+    border-bottom: 5px solid black;
+    padding-bottom: 5px;
+  }
 
 h2 {
   color: grey;
-  font-family: 'Abel', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
   text-align:center;
 
 }
@@ -172,16 +191,18 @@ span {
   text-align: center;
 }
 
+
  input {
-   color: #acb9d2;
-   background-color: #fff;
-   display: block;
-   width: 60%;
-   position: relative;
-   margin: 1% auto;
-   text-align: center;
-   vertical-align: middle;
-   padding: 1%;
+     color: #333;
+     background-color: #fff;
+     /* display: block; */
+     width: 60%;
+     /* position: relative; */
+     margin: 3%;
+     border: 5px solid black;
+     text-align: center;
+     vertical-align: middle;
+     padding: 1%;
 
 }
 
@@ -199,41 +220,47 @@ span {
   margin: 1% auto;
 
  }
-  form.form {
-  text-align: center;
-  display: block;
-  padding: 10%;
-  position: relative;
-  background-color: rgb(240, 240, 255);
+  form {
+    text-align: center;
+    display: block;
+
+    position: relative;
+
+    max-width: 25em;
+    margin: 0 auto;
 
  }
 
 
- form {
- text-align: center;
- display: block;
- padding: 10%;
- position: relative;
- background-color: rgb(240, 240, 255);
-
-}
 
 
  .button {
-  color: white;
-  background-color: rgb(172, 185, 210);
-  display: block;
-  width: 60%;
-  position: relative;
-  margin: 6% auto;
-  padding: 1%;
+     color: black;
+     background-color: #cacaec;
+     border: 5px solid #000;
+     display: block;
+     width: 60%;
+     position: relative;
+     margin: 6% auto;
+     padding: 1%;
  }
+
+ .button2 {
+   color: #000;
+   background-color: #cacaec;
+   display: block;
+   width: 60%;
+   position: relative;
+   margin: 6% auto;
+   padding: 1%;
+   }
+
 
 .profile {
 
-  border: 1px solid #e6e6e6;
-  max-width: 60%;
-  margin: 0 auto;
+  border: 5px solid black;
+max-width: 20em;
+margin: 0 auto;
 
   .profile-pic {
       max-width: 100px;
@@ -309,15 +336,15 @@ footer {
   height: 10%;
   width: 10%;
 }
-
-.button {
- color: rgb(172, 185, 210);
- background-color: white;
- display: block;
- width: 60%;
- position: relative;
- margin-top: 1%;
-}
+//
+// .button {
+//  color: rgb(172, 185, 210);
+//  background-color: white;
+//  display: block;
+//  width: 60%;
+//  position: relative;
+//  margin-top: 1%;
+// }
 
 .collection-name {
   margin-top: 5%;
@@ -325,9 +352,11 @@ footer {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: 60%;
+  max-width: 25em;
   border: 1px solid #e6e6e6;
-  background-color: rgb(172, 185, 210);
+  background-color: #cacaec;
+
+
   h2 {
     color: white;
     font-family: 'Abel', sans-serif;

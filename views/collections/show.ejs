@@ -1,7 +1,7 @@
-<h1>Collections</h1>
+<h1><%= collection.name %></h1>
 
 <div class="collection-name">
-  <h2><%= collection.name %></h2>
+
   <% if(locals.isAuthenticated) { %>
   <a href="/users/<%= user.id %>/collections/<%= collection.id %>/edit">(Edit Collection)</a>
   <% } %>

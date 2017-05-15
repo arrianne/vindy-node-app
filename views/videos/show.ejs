@@ -1,22 +1,27 @@
-<div>
-  <div>
-    <h2><%= video.name %></h2>
-    <div class="watch-video">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.youtubeId %>" frameborder="0" allowfullscreen></iframe>
-    <p><%= video.description %><p>
-    </div>
+<section id="contact class" class="container content-section text-center">
+  <div class="container-fluid">
 
-    <% if(locals.isAuthenticated) { %>
-    <form method="POST" action="/users/<%= user.id %>/collections/<%=collection.id%>/videos/<%= video.id%>">
-      <input type="hidden" name="_method" value="DELETE">
-      <button>Delete</button>
-    </form>
-    <% } %>
-    <% if(locals.isAuthenticated) { %>
-    <a href="/users/<%= user.id %>/collections/<%=collection.id%>/videos/<%= video.id%>/edit">Edit</a>
-    <% } %>
+      <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <h1 class="videoShow"><%= video.name %></h1>
+          <div class="watch-video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video.youtubeId %>" frameborder="0" allowfullscreen></iframe>
+            <p class="show"><%= video.description %><p>
+          </div>
+          <% if(locals.isAuthenticated) { %>
+            <form method="POST" action="/users/<%= user.id %>/collections/<%=collection.id%>/videos/<%= video.id%>">
+              <a class="button" href="/users/<%= user.id %>/collections/<%=collection.id%>">Back to all videos</a>
+              <input type="hidden" name="_method" value="DELETE">
+              <% if(locals.isAuthenticated) { %>
+                <a class="button" href="/users/<%= user.id %>/collections/<%=collection.id%>/videos/<%= video.id%>/edit">Edit</a>
+              <% } %>
+              <button class="button">Delete</button>
+            </form>
+          <% } %>
+
+        </div>
+
+      </div>
+
   </div>
-
-
-  <a href="/users/<%= user.id %>/collections/<%=collection.id%>">Back</a>
-</div>
+</section>

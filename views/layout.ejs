@@ -18,7 +18,8 @@
       <li role="presentation"><a href="/users">Video collectors</a></li>
       <% if(locals.isAuthenticated) { %>
           <li role="presentation"><a href="/logout">Logout</a></li>
-          <li role="presentation"><a href="/users/<%= user.id %>/collections">Your collections</a></li>
+          <li role="presentation"><a href="/users/<%= user.id %>/collections">Manage collections</a></li>
+          <li role="presentation"><a href="/users/<%= user.id %>">Profile</a></li>
       <% } else { %>
           <li role="presentation"><a  href="/login">Login</a></li>
           <li role="presentation"><a  href="/register">Register</a></li>

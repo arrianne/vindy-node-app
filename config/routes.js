@@ -47,6 +47,9 @@ router.route('/users/:id/collections/:collectionId')
 router.route('/users/:id/collections/:collectionId/edit')
   .get(secureRoute, collections.edit);
 
+router.route('/users/:id/collections/:collectionId/delete')
+  .get(secureRoute, collections.delete);
+
 router.route('/users/:id/collections/:collectionId/videos')
   .get(videos.index)
   .post(secureRoute, videos.create);

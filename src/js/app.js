@@ -52,7 +52,11 @@ $(() => {
     $('input[name="thumbnailUrl"]').val(thumbnail);
   }
 
-
+  $('#search').click(function() {
+    $('html, body').animate({
+      scrollTop: $('.results').offset().top
+    }, 1000);
+  });
 
 
 
@@ -69,7 +73,6 @@ $(() => {
     gapi.client.youtube.search.list({
       q,
       part: 'snippet',
-
       maxResults: 9,
       order: 'viewCount'
     }).execute((res) => {

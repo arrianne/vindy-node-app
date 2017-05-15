@@ -12,7 +12,8 @@ const videoSchema = new mongoose.Schema({
 
 const collectionSchema = new mongoose.Schema({
   name: { type: String },
-  videos: [ videoSchema ]
+  videos: [ videoSchema ],
+  // createdBy: { type: mongoose.Schema.ObjectId, ref: 'User', required: true }
 });
 
 const userSchema = new mongoose.Schema({

@@ -41,7 +41,7 @@ body {
 }
 
 .form{
-  background-image: url("../assets/images/logoedges.png");
+  background-image: url("../assets/images/logoedgesfinal.png");
   background-size: cover;
   background-size: 100% 100%;
 
@@ -51,13 +51,16 @@ body {
 }
 
 .bg {
-  background-image: url("../assets/images/logoedges.png");
-  background-size: cover;
-  background-size: 100% 100%;
+  background-image: url("../assets/images/logoedgesfinal.png");
 
+  background-size: cover;
+  background-size: 500px 700px;
+  background-repeat: no-repeat;
+  background-position: center;
   min-height: 650px;
   padding: 80px;
-  padding-top: 120px;
+  padding-top: 50px;
+  margin-top: 5em;
 
 }
 
@@ -68,8 +71,20 @@ h1 {
     text-align: center;
     padding: 2%;
     font-size: 60px;
-    border-bottom: 5px solid black;
+
     padding-bottom: 5px;
+  }
+
+  .videoShow {
+    font-family: 'Open Sans Condensed',sans-serif;
+    font-weight: 600;
+    color: black;
+    text-align: center;
+    padding: 2%;
+    font-size: 60px;
+    padding-bottom: 5px;
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
 h2 {
@@ -81,10 +96,15 @@ h2 {
 
 
 img {
-  width: 350px;
+  width: 250px;
   display: block;
   margin: 2em auto;
 
+}
+.logo {
+  width: 250px;
+  display: block;
+  margin: 10em auto;
 }
 
 
@@ -123,10 +143,17 @@ a {
 
 p {
   text-align: left;
-  width: 26em;
-
-  margin-left: 5em;
+  width: 20em;
+  margin-left: 3em;
   margin-bottom: 3em;
+}
+
+.show {
+  text-align: left;
+  width: 40em;
+  margin-left: 0em;
+  margin-bottom: 3em;
+  margin-top: 2em;
 }
 
 .add-new-video {
@@ -232,7 +259,7 @@ span {
    display: block;
    width: 20em;
    position: relative;
-   margin: 6% auto;
+   margin: auto;
    padding: 1%;
 
  }
@@ -257,7 +284,8 @@ span {
      display: block;
      width: 20em;
      position: relative;
-     margin: 6% auto;
+     margin: auto;
+     margin-bottom: 4em;
      padding: 1%;
  }
 
@@ -275,8 +303,8 @@ span {
 .profile {
 
   border: 5px solid black;
-max-width: 20em;
-margin: 0 auto;
+  max-width: 20em;
+  margin: 5em auto;
 
   .profile-pic {
       max-width: 100px;
@@ -299,20 +327,20 @@ margin: 0 auto;
 
 .new-collection {
   margin: 0 auto;
-  .button {
-   color: white;
-   background-color: rgb(172, 185, 210);
-   display: block;
-   width: 20em;
-   position: relative;
-   margin-bottom: 5em;
-  }
+  // .button {
+  //  color: white;
+  //  background-color: rgb(172, 185, 210);
+  //  display: block;
+  //  width: 20em;
+  //  position: relative;
+  //  margin-bottom: 5em;
+  // }
 }
 
 .video-list {
-  max-width: 35em;
+  max-width: 25em;
   margin: 5% auto;
-  border: 1px solid #e6e6e6;
+  border: 2px solid black;
 }
 
 
@@ -334,7 +362,7 @@ thumbnailUrl {
   display: block;
   width: 100%;
   background-color: transparent;
-  border: 1px solid #337ab7;
+  border: 2px solid black;
   margin: 5px 0;
   &.selected {
     background-color: grey;
@@ -352,15 +380,7 @@ footer {
   height: 10%;
   width: 10%;
 }
-//
-// .button {
-//  color: rgb(172, 185, 210);
-//  background-color: white;
-//  display: block;
-//  width: 60%;
-//  position: relative;
-//  margin-top: 1%;
-// }
+
 
 .collection-name {
   margin-top: 5%;
@@ -371,7 +391,7 @@ footer {
   max-width: 23em;
   border: 1px solid #e6e6e6;
   background-color: #cacaec;
-  
+
 
 
   h2 {
